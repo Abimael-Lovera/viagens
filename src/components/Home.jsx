@@ -8,15 +8,19 @@ export function Home() {
 	const navigate = useNavigate();
 
 	const handleLogout = async () => {
-		await logout();
-		navigate('/login');
+		try {
+			await logout();
+			navigate('/login');
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	if (loading) return <h1>Loading</h1>;
 
 	return (
 		<>
-			<h1>welcome {user.email}</h1>
+			<h1>welcome {user.displayName || user.email}</h1>
 			<button onClick={handleLogout}>
 				logout
 			</button>

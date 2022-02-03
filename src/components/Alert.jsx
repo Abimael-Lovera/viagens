@@ -1,3 +1,5 @@
-export function Alert() {
-	return <div>Alert</div>;
+export function Alert({ message }) {
+	return <div>
+		<span>{message}</span>
+	</div>;
 }
