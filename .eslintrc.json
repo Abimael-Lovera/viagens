@@ -1,13 +1,12 @@
 {
-    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "es2021": true,
         "node": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -17,27 +16,28 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
+        "react"
     ],
     "rules": {
-        "react/jsx-filename-extension": [
+        "indent": [
             "error",
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx"
-                ]
-            }
+            "tab"
         ],
-        "global-require": "off",
-        "import/prefer-default-export": "off",
-        "no-unused-expressions": [
+        "linebreak-style": [
             "error",
-            {
-                "allowTaggedTemplates": true
-            }
-        ]
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "no-undef": "warn",
+        "no-unused-vars": "warn"
     }
 }
