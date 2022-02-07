@@ -6,6 +6,7 @@ import { Login } from './components/auth/Login';
 import { ProtectedRouter } from './components/ProtectedRoute';
 import { Register } from './components/auth/Register';
 import { AuthProvider } from './context/authContext';
+import { Contato } from './components/contato/Contato';
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 					/>
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
+					<Route path="/contato" element={<Contato />} />
 				</Routes>
 			</AuthProvider>
 		</div>
