@@ -44,41 +44,44 @@ export function Register() {
 
 	return (
 		<>
-			{/* <Navbar /> */}
-			<div className="">
-				{error && <Alert message={error} />}
-				<form
-					onSubmit={handleSubmit}
-					className=""
-				>
-					<div className="">
-						<label htmlFor="email" className="">Email</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="seuemail@email.com"
-							onChange={handleChange}
-							className=""
-						/>
-					</div>
+			<Navbar />
+			<div className="form__container">
+				<section className="container form__content">
+					<h2 className="form__title">Criar Conta</h2>
+					{error && <Alert message={error} />}
+					<form
+						onSubmit={handleSubmit}
+						className=""
+					>
+						<div className="form_container">
+							<label htmlFor="email" className="">Email</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="seuemail@email.com"
+								onChange={handleChange}
+								className="form_input"
+							/>
+						</div>
 
-					<div className="">
-						<label htmlFor="password" className="">Senha</label>
-						<input
-							type="password"
-							name="password"
-							id="password"
-							placeholder="******"
-							onChange={handleChange}
-							className=""
-						/>
-					</div>
+						<div className="form_container">
+							<label htmlFor="password" className="">Senha</label>
+							<input
+								type="password"
+								name="password"
+								id="password"
+								placeholder="******"
+								onChange={handleChange}
+								className="form_input"
+							/>
+						</div>
 
-					<p className="">Ja tem uma Conta? <Link to="/Login">Logar</Link> </p>
+						<p className="">Ja tem uma Conta? <Link to="/Login" className="form__link">Logar</Link> </p>
 
-					<button className="">Criar conta</button>
-				</form>
+						<button className="form__btn">Criar conta</button>
+					</form>
+				</section>
 			</div>
 			<Footer />
 		</>

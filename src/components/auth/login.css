@@ -44,6 +44,9 @@
 }
 .form__link {
   text-decoration: none;
+  font-weight: 600;
+}
+.form__link:hover {
   color: var(--color-title);
 }
 
@@ -55,4 +58,8 @@
   border: 2px solid var(--color-title);
   border-radius: 0.2em;
   padding: 0.7em 1rem;
+}
+.google:hover {
+  background-color: transparent;
+  color: var(--color-title);
 }
