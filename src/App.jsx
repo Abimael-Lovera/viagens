@@ -8,6 +8,7 @@ import { Register } from './components/auth/Register';
 import { AuthProvider } from './context/authContext';
 import { Contato } from './components/contato/Contato';
 import { Destinos } from './components/destinos/Destinos';
+import { Index } from './components/home/Index';
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 					<Route path="/register" element={<Register />} />
 					<Route path="/contato" element={<Contato />} />
 					<Route path="/destinos" element={<Destinos />} />
+					<Route path="/home" element={<Index />} />
 				</Routes>
 			</AuthProvider>
 		</div>
