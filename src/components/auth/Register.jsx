@@ -44,7 +44,7 @@ export function Register() {
 
 	return (
 		<>
-			<Navbar />
+			{/* <Navbar /> */}
 			<div className="">
 				{error && <Alert message={error} />}
 				<form
@@ -57,14 +57,14 @@ export function Register() {
 							type="email"
 							name="email"
 							id="email"
-							placeholder="youremail@email.com"
+							placeholder="seuemail@email.com"
 							onChange={handleChange}
 							className=""
 						/>
 					</div>
 
 					<div className="">
-						<label htmlFor="password" className="">Password</label>
+						<label htmlFor="password" className="">Senha</label>
 						<input
 							type="password"
 							name="password"
@@ -75,9 +75,9 @@ export function Register() {
 						/>
 					</div>
 
-					<p className="">Ya tienes una Cuenta <Link to="/Login">Login</Link> </p>
+					<p className="">Ja tem uma Conta? <Link to="/Login">Logar</Link> </p>
 
-					<button className="">Register</button>
+					<button className="">Criar conta</button>
 				</form>
 			</div>
 			<Footer />

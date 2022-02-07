@@ -73,8 +73,8 @@ export function Footer() {
 				<div className="footer_rights">
 					<p className="footer__copy">&#169; 2021 Abimael Lovera.</p>
 					<div className="footer__terms">
-						<a href="#!" className="footer__terms-link">Terms & Agreements</a>
-						<a href="#!" className="footer__terms-link">Privacy Policy</a>
+						<a href="#!" className="footer__terms-link">Termos & Condições</a>
+						<a href="#!" className="footer__terms-link"> Política de Privacidade</a>
 					</div>
 				</div>
 			</section>

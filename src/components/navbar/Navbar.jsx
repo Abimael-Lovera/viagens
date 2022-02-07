@@ -20,31 +20,26 @@ export function Navbar() {
 					<ul className="navbar-nav">
 						<li className="nav-item">
 							<Link className="nav-link nav_links" to="/destinos">
-								<i className="fa-solid fa-plane-departure"></i>
-								Destinos
+								<i className="fa-solid fa-plane-departure"></i> Destinos
 							</Link>
 						</li>
 						<li className="nav-item">
 							<Link className="nav-link nav_links" to="/promocoes">
-								<i className="fa-solid fa-briefcase"></i>
-								Promoções
+								<i className="fa-solid fa-briefcase"></i> Promoções
 							</Link>
 						</li>
 						<li className="nav-item">
 							<Link className="nav-link nav_links" to="/contato">
-								<i className="fa-solid fa-address-book"></i>
-								Contato
+								<i className="fa-solid fa-address-book"></i> Contato
 							</Link>
 						</li>
 						<li className="nav-item">
 							<Link className="nav-link nav_links" to="/login">
-								Login
-								<i className="fa-solid fa-right-to-bracket"></i>
+								Login <i className="fa-solid fa-right-to-bracket"></i>
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link nav_links nav_btn" to="/register">
-								Criar Conta
+							<Link className="nav-link nav_links nav_btn" to="/register"> Criar Conta
 							</Link>
 						</li>
 

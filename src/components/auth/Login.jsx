@@ -57,7 +57,7 @@ export function Login() {
 
 	return (
 		<>
-			<Navbar />
+			{/* <Navbar /> */}
 			<div className="">
 				{error && <Alert message={error} />}
 				<form
@@ -65,19 +65,19 @@ export function Login() {
 					className=""
 				>
 					<div className="">
-						<label htmlFor="email" className="">Email</label>
+						<label htmlFor="email" className="">Email </label>
 						<input
 							type="email"
 							name="email"
 							id=""
-							placeholder="youremail@email.com"
+							placeholder="seuemail@email.com"
 							onChange={handleChange}
 							className=""
 						/>
 					</div>
 
 					<div className="">
-						<label htmlFor="password" className="">Password</label>
+						<label htmlFor="password" className="">Senha </label>
 						<input
 							type="password"
 							name="password"
@@ -101,9 +101,9 @@ export function Login() {
 
 				</form>
 
-				<p className="">No tienes una Cuenta <Link to="/register">Cria Conta</Link> </p>
+				<p className="">Não tem uma conta? <Link to="/register">Crie sua Conta</Link> </p>
 
-				<button onClick={handleGoogleSignIn} className="">Sign in Google</button>
+				<button onClick={handleGoogleSignIn} className="">Logar com Google</button>
 
 			</div>
 			<Footer />

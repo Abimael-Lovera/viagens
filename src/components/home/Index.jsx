@@ -133,7 +133,7 @@ export function Index() {
 			</section>
 			{/* QUESTIONS */}
 			<section className="container questions_container">
-				<h2 className="questions_title title text-center">Perguntas Frecuentes</h2>
+				<h2 className="questions_title title text-center">Perguntas Frequentes</h2>
 				<div className="accordion accordion-flush" id="accordionFlushExample">
 					<div className="accordion-item">
 						<h2 className="accordion-header" id="flush-headingOne">
