@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function Navbar() {
 	return (
-		<nav className="navbar fixed-top navbar-expand-lg navbar-light p-md-3">
+		<nav className="navbar bg-light	fixed-top navbar-expand-lg navbar-light p-md-3" id="navbar">
 			<div className="container">
 				<Link className="navbar-brand nav_logo" to="/home">
 					<img src={logo} alt="logo-lovera" />

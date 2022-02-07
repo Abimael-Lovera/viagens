@@ -44,34 +44,5 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript">
-      const nav = document.querySelector("nav");
-
-      window.addEventListener("scroll", function () {
-        if (window.pageYOffset > 100) {
-          // nav.classList.remove('navbar-light');
-          nav.classList.add("bg-light", "shadow");
-        } else {
-          nav.classList.remove("bg-light", "shadow");
-          nav.classList.add("navbar-light");
-        }
-      });
-      // Login
-      const x = document.getElementById("login");
-      const y = document.getElementById("register");
-      const btn = document.getElementById("btn");
-      function register() {
-        x.style.left = "-400px";
-        y.style.left = "50px";
-        btn.style.left = "125px";
-        console.log(login, registerA, btn);
-      }
-      function login() {
-        x.style.left = "50px";
-        y.style.left = "450px";
-        btn.style.left = "-1px";
-        console.log(login, registerA, btn);
-      }
-    </script>
   </body>
 </html>
