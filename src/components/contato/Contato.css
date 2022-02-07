@@ -9,8 +9,8 @@
   background: transparent;
   width: 90%;
   margin: auto;
-  max-width: 500px;
-  min-width: 300px;
+  max-width: 450px;
+  min-width: 250px;
   padding: 3.5em 1.5em;
   border-radius: 2em;
   border: 3px solid var(--color-subtitle);
@@ -21,6 +21,7 @@
   display: grid;
   gap: 1em;
   grid-auto-columns: 100%;
+  margin: 1rem 0;
 }
 .form_title {
   text-align: center;

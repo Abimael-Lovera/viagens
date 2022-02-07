@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 import { Alert } from './Alert';
+import './login.css';
+import google from '../../assets/img/google.png';
 
 import { Navbar } from '../navbar/Navbar';
 import { Footer } from '../footer/Footer';
@@ -57,54 +59,59 @@ export function Login() {
 
 	return (
 		<>
-			{/* <Navbar /> */}
-			<div className="">
-				{error && <Alert message={error} />}
-				<form
-					onSubmit={handleSubmit}
-					className=""
-				>
-					<div className="">
-						<label htmlFor="email" className="">Email </label>
-						<input
-							type="email"
-							name="email"
-							id=""
-							placeholder="seuemail@email.com"
-							onChange={handleChange}
-							className=""
-						/>
-					</div>
+			<Navbar />
+			<div className="form__container">
+				<section className="container form__content">
+					<h2 className="form__title">Login</h2>
+					{error && <Alert message={error} />}
+					<form
+						onSubmit={handleSubmit}
+						className=""
+					>
+						<div className="form_container">
+							<label htmlFor="email" className="">Email </label>
+							<input
+								type="email"
+								name="email"
+								id=""
+								placeholder="seuemail@email.com"
+								onChange={handleChange}
+								className="form_input"
+							/>
+						</div>
 
-					<div className="">
-						<label htmlFor="password" className="">Senha </label>
-						<input
-							type="password"
-							name="password"
-							id="password"
-							placeholder="******"
-							onChange={handleChange}
-							className=""
-						/>
-					</div>
+						<div className="form_container">
+							<label htmlFor="password" className="">Senha </label>
+							<input
+								type="password"
+								name="password"
+								id="password"
+								placeholder="******"
+								onChange={handleChange}
+								className="form_input"
+							/>
+						</div>
 
-					<div className="">
-						<button className="">Login</button>
+						<div className="form__footer">
+							<button className="form__btn">Login</button>
 
-						<a
-							href="#!"
-							className=""
-							onClick={handleResetPassword}
-						> Esqueceu Senha
-						</a>
-					</div>
+							<a
+								href="#!"
+								className="form__link"
+								onClick={handleResetPassword}
+							> Esqueceu Senha
+							</a>
+						</div>
 
-				</form>
+					</form>
 
-				<p className="">Não tem uma conta? <Link to="/register">Crie sua Conta</Link> </p>
+					<p className="">Não tem uma conta? <Link to="/register" className="form__link">Crie sua Conta</Link> </p>
 
-				<button onClick={handleGoogleSignIn} className="">Logar com Google</button>
+					<button onClick={handleGoogleSignIn} className="google">
+						<img src={google} alt="" /> Logar com Google
+					</button>
 
+				</section>
 			</div>
 			<Footer />
 		</>
