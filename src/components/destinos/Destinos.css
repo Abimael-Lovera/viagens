@@ -1,5 +1,6 @@
-#container {
-  margin-top: 2rem;
+.container__destinos {
+  padding-top: 2rem;
+  background-color: var(--color-bg);
 }
 .cards_container {
   display: flex;
