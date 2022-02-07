@@ -3,6 +3,8 @@ import { useAuth } from '../../context/authContext';
 import { Footer } from '../footer/Footer';
 import { Navbar } from '../navbar/Navbar';
 
+import './Home.css';
+
 export function Home() {
 	const { user, logout, loading } = useAuth();
 	console.log(user);
@@ -23,10 +25,14 @@ export function Home() {
 	return (
 		<>
 			<Navbar />
-			<div className="">
-				<div className="">
-					<h1 className="">welcome {user.displayName || user.email}</h1>
-					<button onClick={handleLogout}>
+			<div className="home ">
+				<div className="container home__container">
+					<h2 className="">Bem-vindo </h2>
+					{user.photoURL == null ? <i className="fa-solid fa-user fa-4x"></i> : <img src={user.photoURL} alt="" />
+					}
+					<h1 className="">{user.displayName || user.email}</h1>
+
+					<button onClick={handleLogout} className="form__btn">
 						logout
 					</button>
 				</div>
