@@ -1,6 +1,20 @@
+import './Destinos.css';
 import { Footer } from '../footer/Footer';
 import { Navbar } from '../navbar/Navbar';
-import './Destinos.css';
+
+import rioHero from '../../assets/img/rio.jpg';
+import sampaHero from '../../assets/img/sampa.jpg';
+import fozHero from '../../assets/img/foz.jpg';
+import saopaulo from '../../assets/img/sao-paulo.jpeg';
+import rioDeJaneiro from '../../assets/img/rioDeJaneiro.jpeg';
+import lisboa from '../../assets/img/lisboa.jpeg';
+import natal from '../../assets/img/natal.jpeg';
+import orlando from '../../assets/img/orlando.jpeg';
+import maceio1 from '../../assets/img/maceio-1.jpeg';
+import fozDoIguacu from '../../assets/img/fozDoIguacu.png';
+import joaoPessoa from '../../assets/img/joaoPessoa.jpeg';
+import salvador1 from '../../assets/img/salvador-1.jpeg';
+
 
 export function Destinos() {
 	return (
@@ -18,7 +32,7 @@ export function Destinos() {
 					</div>
 					<div className="carousel-inner">
 						<div className="carousel-item active">
-							<img src="~/img/rio.jpg" className="d-block w-100 vh-100" alt="..." />
+							<img src={rioHero} className="d-block w-100 vh-100" alt="..." />
 							<div className="carousel-caption d-none d-md-block">
 								<h5 className="fs-1">Foz do Iguaçu</h5>
 								<p>
@@ -28,7 +42,7 @@ export function Destinos() {
 							</div>
 						</div>
 						<div className="carousel-item">
-							<img src="~/img/sampa.jpg" className="d-block w-100 vh-100" alt="..." />
+							<img src={sampaHero} className="d-block w-100 vh-100" alt="..." />
 							<div className="carousel-caption d-none d-md-block">
 								<h5 className="fs-1">São Paulol</h5>
 								<p>
@@ -38,7 +52,7 @@ export function Destinos() {
 							</div>
 						</div>
 						<div className="carousel-item">
-							<img src="~/img/foz.jpg" className="d-block w-100 vh-100" alt="..." />
+							<img src={fozHero} className="d-block w-100 vh-100" alt="..." />
 							<div className="carousel-caption d-none d-md-block">
 								<h5 className="fs-1">Rio de Janeiro</h5>
 								<p>
@@ -67,7 +81,7 @@ export function Destinos() {
 				</p>
 				<section className="cards_container">
 					<div className="cards_container-card">
-						<img src="~/img/sao-paulo.jpeg" alt="" />
+						<img src={saopaulo} alt="" />
 						<div className="cards_container-body">
 							<h4>Sao paulo</h4>
 							<p>
@@ -79,7 +93,7 @@ export function Destinos() {
 						</div>
 					</div>
 					<div className="cards_container-card">
-						<img src="~/img/rioDeJaneiro.jpeg" alt="" />
+						<img src={rioDeJaneiro} alt="" />
 						<div className="cards_container-body">
 							<h4>Rio de Janerio</h4>
 							<p>
@@ -91,7 +105,7 @@ export function Destinos() {
 						</div>
 					</div>
 					<div className="cards_container-card">
-						<img src="~/img/lisboa.jpeg" alt="" />
+						<img src={lisboa} alt="" />
 						<div className="cards_container-body">
 							<h4>Lisboa</h4>
 							<p>
@@ -103,7 +117,7 @@ export function Destinos() {
 						</div>
 					</div>
 					<div className="cards_container-card">
-						<img src="~/img/natal.jpeg" alt="" />
+						<img src={natal} alt="" />
 						<div className="cards_container-body">
 							<h4>Natal</h4>
 							<p>
@@ -115,7 +129,7 @@ export function Destinos() {
 						</div>
 					</div>
 					<div className="cards_container-card">
-						<img src="~/img/orlando.jpeg" alt="" />
+						<img src={orlando} alt="" />
 						<div className="cards_container-body">
 							<h4>Orlando</h4>
 							<p>
@@ -127,7 +141,7 @@ export function Destinos() {
 						</div>
 					</div>
 					<div className="cards_container-card">
-						<img src="~/img/maceio-1.jpeg" alt="" />
+						<img src={maceio1} alt="" />
 						<div className="cards_container-body">
 							<h4>Maceió</h4>
 							<p>
@@ -139,7 +153,7 @@ export function Destinos() {
 						</div>
 					</div>
 					<div className="cards_container-card">
-						<img src="~/img/fozDoIguacu.png" alt="" />
+						<img src={fozDoIguacu} alt="" />
 						<div className="cards_container-body">
 							<h4>Foz do Iguaçu</h4>
 							<p>
@@ -151,7 +165,7 @@ export function Destinos() {
 						</div>
 					</div>
 					<div className="cards_container-card">
-						<img src="~/img/joaoPessoa.jpeg" alt="" />
+						<img src={joaoPessoa} alt="" />
 						<div className="cards_container-body">
 							<h4>João Pessoa</h4>
 							<p>
@@ -163,7 +177,7 @@ export function Destinos() {
 						</div>
 					</div>
 					<div className="cards_container-card">
-						<img src="~/img/salvador-1.jpeg" alt="" />
+						<img src={salvador1} alt="" />
 						<div className="cards_container-body">
 							<h4>Salvador</h4>
 							<p>
