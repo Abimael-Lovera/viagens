@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
+import { Footer } from '../footer/Footer';
+import { Navbar } from '../navbar/Navbar';
 
 export function Home() {
 	const { user, logout, loading } = useAuth();
@@ -19,13 +21,17 @@ export function Home() {
 	if (loading) return <h1>Loading</h1>;
 
 	return (
-		<div className="">
+		<>
+			<Navbar />
 			<div className="">
-				<h1 className="">welcome {user.displayName || user.email}</h1>
-				<button onClick={handleLogout}>
-					logout
-				</button>
+				<div className="">
+					<h1 className="">welcome {user.displayName || user.email}</h1>
+					<button onClick={handleLogout}>
+						logout
+					</button>
+				</div>
 			</div>
-		</div>
+			<Footer />
+		</>
 	);
 }
