@@ -1,5 +1,7 @@
-#container {
-  margin-top: 80px;
+.container__promocoes {
+  margin-top: 75px;
+  padding-top: 2rem;
+  background: var(--color-bg);
 }
 .cards__container {
   width: 100%;
