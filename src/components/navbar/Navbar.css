@@ -1,0 +1,48 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  gap: 1rem;
+  background: transparent;
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.nav_logo img {
+  /* font-size: 3em;
+	color: #111;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 800; */
+  width: 140px;
+}
+
+.nav_link {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-width;
+  align-items: center;
+  gap: 1.5em;
+  font-size: 1em;
+  text-align: center;
+  list-style: none;
+}
+.nav_links {
+  color: var(--color-nav-footer) !important;
+}
+
+.nav_btn {
+  max-width: 140px;
+  text-align: center;
+  border: 1px solid var(--color-nav-footer);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+@media (max-width: 1000px) {
+  .nav_btn {
+    max-width: 140px;
+    text-align: left;
+    border: none;
+    padding: none;
+  }
+}
