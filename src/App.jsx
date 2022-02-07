@@ -8,6 +8,7 @@ import { Register } from './components/auth/Register';
 import { AuthProvider } from './context/authContext';
 import { Contato } from './components/contato/Contato';
 import { Destinos } from './components/destinos/Destinos';
+import { Promocoes } from './components/promocoes/Promocoes';
 import { Index } from './components/home/Index';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
 					<Route path="/contato" element={<Contato />} />
 					<Route path="/destinos" element={<Destinos />} />
 					<Route path="/home" element={<Index />} />
+					<Route path="/promocoes" element={<Promocoes />} />
 				</Routes>
 			</AuthProvider>
 		</div>
