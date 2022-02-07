@@ -3,6 +3,9 @@ import { useAuth } from '../../context/authContext';
 import { Link, useNavigate } from 'react-router-dom';
 import { Alert } from './Alert';
 
+import { Navbar } from '../navbar/Navbar';
+import { Footer } from '../footer/Footer';
+
 export function Register() {
 	const [user, setUser] = useState({
 		email: '',
@@ -40,40 +43,44 @@ export function Register() {
 	};
 
 	return (
-		<div className="">
-			{error && <Alert message={error} />}
-			<form
-				onSubmit={handleSubmit}
-				className=""
-			>
-				<div className="">
-					<label htmlFor="email" className="">Email</label>
-					<input
-						type="email"
-						name="email"
-						id="email"
-						placeholder="youremail@email.com"
-						onChange={handleChange}
-						className=""
-					/>
-				</div>
+		<>
+			<Navbar />
+			<div className="">
+				{error && <Alert message={error} />}
+				<form
+					onSubmit={handleSubmit}
+					className=""
+				>
+					<div className="">
+						<label htmlFor="email" className="">Email</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="youremail@email.com"
+							onChange={handleChange}
+							className=""
+						/>
+					</div>
 
-				<div className="">
-					<label htmlFor="password" className="">Password</label>
-					<input
-						type="password"
-						name="password"
-						id="password"
-						placeholder="******"
-						onChange={handleChange}
-						className=""
-					/>
-				</div>
+					<div className="">
+						<label htmlFor="password" className="">Password</label>
+						<input
+							type="password"
+							name="password"
+							id="password"
+							placeholder="******"
+							onChange={handleChange}
+							className=""
+						/>
+					</div>
 
-				<p className="">Ya tienes una Cuenta <Link to="/Login">Login</Link> </p>
+					<p className="">Ya tienes una Cuenta <Link to="/Login">Login</Link> </p>
 
-				<button className="">Register</button>
-			</form>
-		</div>
+					<button className="">Register</button>
+				</form>
+			</div>
+			<Footer />
+		</>
 	);
 }
