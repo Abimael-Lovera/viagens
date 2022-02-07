@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/authContext';
+import { useAuth } from '../../context/authContext';
 import { Alert } from './Alert';
 
 export function Login() {
@@ -53,42 +53,42 @@ export function Login() {
 	};
 
 	return (
-		<div className="w-full max-w-xs m-auto">
+		<div className="">
 			{error && <Alert message={error} />}
 			<form
 				onSubmit={handleSubmit}
-				className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+				className=""
 			>
-				<div className="mb-4">
-					<label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
+				<div className="">
+					<label htmlFor="email" className="">Email</label>
 					<input
 						type="email"
 						name="email"
 						id=""
 						placeholder="youremail@email.com"
 						onChange={handleChange}
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className=""
 					/>
 				</div>
 
-				<div className="mb-4">
-					<label htmlFor="password" className="block text-gray-700 font-bold mb-2">Password</label>
+				<div className="">
+					<label htmlFor="password" className="">Password</label>
 					<input
 						type="password"
 						name="password"
 						id="password"
 						placeholder="******"
 						onChange={handleChange}
-						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						className=""
 					/>
 				</div>
 
-				<div className="flex items-center justify-between">
-					<button className="bg-blue-500 hover:bg-blue-600 text-whit font-bold py-2 px-4 rounded focus:outline-none focus.shadow-outline text-sm">Login</button>
+				<div className="">
+					<button className="">Login</button>
 
 					<a
 						href="#!"
-						className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+						className=""
 						onClick={handleResetPassword}
 					> Esqueceu Senha
 					</a>
@@ -96,9 +96,9 @@ export function Login() {
 
 			</form>
 
-			<p className="my-4 text-sm flex justify-between px-3">No tienes una Cuenta <Link to="/register">Cria Conta</Link> </p>
+			<p className="">No tienes una Cuenta <Link to="/register">Cria Conta</Link> </p>
 
-			<button onClick={handleGoogleSignIn} className="bg-slate-50 hover:bg-slate-200 text-black shadow-md rounded border-2 border-gray-300 py-3 px-4 w-full">Sign in Google</button>
+			<button onClick={handleGoogleSignIn} className="">Sign in Google</button>
 
 		</div>
 	);
