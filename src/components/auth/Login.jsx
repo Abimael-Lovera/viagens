@@ -3,6 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 import { Alert } from './Alert';
 
+import { Navbar } from '../navbar/Navbar';
+import { Footer } from '../footer/Footer';
+
 export function Login() {
 	const [user, setUser] = useState({
 		email: '',
@@ -53,53 +56,57 @@ export function Login() {
 	};
 
 	return (
-		<div className="">
-			{error && <Alert message={error} />}
-			<form
-				onSubmit={handleSubmit}
-				className=""
-			>
-				<div className="">
-					<label htmlFor="email" className="">Email</label>
-					<input
-						type="email"
-						name="email"
-						id=""
-						placeholder="youremail@email.com"
-						onChange={handleChange}
-						className=""
-					/>
-				</div>
+		<>
+			<Navbar />
+			<div className="">
+				{error && <Alert message={error} />}
+				<form
+					onSubmit={handleSubmit}
+					className=""
+				>
+					<div className="">
+						<label htmlFor="email" className="">Email</label>
+						<input
+							type="email"
+							name="email"
+							id=""
+							placeholder="youremail@email.com"
+							onChange={handleChange}
+							className=""
+						/>
+					</div>
 
-				<div className="">
-					<label htmlFor="password" className="">Password</label>
-					<input
-						type="password"
-						name="password"
-						id="password"
-						placeholder="******"
-						onChange={handleChange}
-						className=""
-					/>
-				</div>
+					<div className="">
+						<label htmlFor="password" className="">Password</label>
+						<input
+							type="password"
+							name="password"
+							id="password"
+							placeholder="******"
+							onChange={handleChange}
+							className=""
+						/>
+					</div>
 
-				<div className="">
-					<button className="">Login</button>
+					<div className="">
+						<button className="">Login</button>
 
-					<a
-						href="#!"
-						className=""
-						onClick={handleResetPassword}
-					> Esqueceu Senha
-					</a>
-				</div>
+						<a
+							href="#!"
+							className=""
+							onClick={handleResetPassword}
+						> Esqueceu Senha
+						</a>
+					</div>
 
-			</form>
+				</form>
 
-			<p className="">No tienes una Cuenta <Link to="/register">Cria Conta</Link> </p>
+				<p className="">No tienes una Cuenta <Link to="/register">Cria Conta</Link> </p>
 
-			<button onClick={handleGoogleSignIn} className="">Sign in Google</button>
+				<button onClick={handleGoogleSignIn} className="">Sign in Google</button>
 
-		</div>
+			</div>
+			<Footer />
+		</>
 	);
 }
