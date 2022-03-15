@@ -10,26 +10,28 @@ import { Contato } from './components/contato/Contato';
 import { Destinos } from './components/destinos/Destinos';
 import { Promocoes } from './components/promocoes/Promocoes';
 import { Index } from './components/home/Index';
+import { Pedido } from './components/pedido/Pedido';
 
 function App() {
 	return (
-		<div className="">
+		<div className=''>
 			<AuthProvider>
 				<Routes>
 					<Route
-						path="/"
+						path='/'
 						element={
-							<ProtectedRouter >
+							<ProtectedRouter>
 								<Home />
 							</ProtectedRouter>
 						}
 					/>
-					<Route path="/login" element={<Login />} />
-					<Route path="/register" element={<Register />} />
-					<Route path="/contato" element={<Contato />} />
-					<Route path="/destinos" element={<Destinos />} />
-					<Route path="/home" element={<Index />} />
-					<Route path="/promocoes" element={<Promocoes />} />
+					<Route path='/login' element={<Login />} />
+					<Route path='/register' element={<Register />} />
+					<Route path='/contato' element={<Contato />} />
+					<Route path='/destinos' element={<Destinos />} />
+					<Route path='/home' element={<Index />} />
+					<Route path='/promocoes' element={<Promocoes />} />
+					<Route path='/pedido' element={<Pedido />} />
 				</Routes>
 			</AuthProvider>
 		</div>
