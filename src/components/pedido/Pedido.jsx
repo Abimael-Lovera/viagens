@@ -46,11 +46,54 @@ export function Pedido() {
 			<Navbar />
 			<div className='pedido'>
 				<div className='container pedido__container'>
+					<h1 className='title'>Seus Pedidos</h1>
 					<Link className='btn form__btn' to='/'>
 						Perfil
 					</Link>
 					<br />
 					<br />
+					<section className='pedido__feed'>
+						{pedido?.map((ped) => {
+							return (
+								<article key={ped.id} className='pedido__fedd_post'>
+									<div className='pedido__content'>
+										<span className='pedido__content_title'>
+											<strong>Destino: {ped.destino}</strong>
+										</span>
+										<hr />
+										<span scope='row'>
+											<b>N° Pedido:</b> {ped.id}
+										</span>
+										<span>
+											<b>Nome:</b> {ped.nome}
+										</span>
+										<span>
+											<b>Email:</b> {ped.email}
+										</span>
+										<span>
+											<b>Data:</b> {ped.data.substr(0, 10)}
+										</span>
+									</div>
+
+									<div className='pedido__btns'>
+										<button className='btn pedido__btn_editar'>
+											Editar <i className='fa-solid fa-pen-to-square'></i>
+										</button>
+
+										<button
+											className='btn pedido__btn_excluir '
+											onClick={() => deletePedido(ped.id)}
+										>
+											Excluir <i className='fa-solid fa-trash-can'></i>
+										</button>
+									</div>
+								</article>
+							);
+						})}
+					</section>
+					{/*  */}
+					<br />
+					<h2>Novo Pedido</h2>
 					<form onSubmit={enviarPedido}>
 						<div className='mb-3'>
 							<label className='form-label'>Nome</label>
@@ -78,33 +121,6 @@ export function Pedido() {
 							Submit
 						</button>
 					</form>
-					<br />
-					<h3>Table GET</h3>
-
-					<section className='pedido__feed'>
-						{pedido?.map((ped) => {
-							return (
-								<article key={ped.id} className='pedido__fedd_post'>
-									<h6>Destino: {ped.destino}</h6>
-									<span scope='row'>N° Pedido: {ped.id}</span>
-									<span>Nome: {ped.nome}</span>
-									<span>Email: {ped.email}</span>
-									<span>Data:{ped.data.substr(0, 10)}</span>
-
-									<button className='btn pedido__btn_editar'>
-										Editar <i className='fa-solid fa-pen-to-square'></i>
-									</button>
-
-									<button
-										className='btn pedido__btn_excluir '
-										onClick={() => deletePedido(ped.id)}
-									>
-										Excluir <i className='fa-solid fa-trash-can'></i>
-									</button>
-								</article>
-							);
-						})}
-					</section>
 				</div>
 			</div>
 			<Footer />

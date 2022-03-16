@@ -12,16 +12,33 @@
 }
 .pedido__fedd_post {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	gap: 1rem;
 	align-items: flex-start;
 	justify-content: center;
 	padding: 1rem;
 	min-width: 250px;
-	width: 500px;
+	width: 350px;
 	background: #ffeed3;
 	border-radius: 0px 32px 0px 32px;
 	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+.pedido__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	padding: 0 2rem;
+	color: #181e4b;
+}
+.pedido__content_title {
+	font-size: 1.1rem;
+}
+.pedido__btns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
 }
 .pedido__btn_editar {
 	background: transparent;
