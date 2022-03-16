@@ -13,10 +13,10 @@ import { Index } from './components/home/Index';
 import { Pedido } from './components/pedido/Pedido';
 import { Navbar } from './components/navbar/Navbar';
 import { Footer } from './components/footer/Footer';
-import Feed from './components/crud/Feed';
-import Post from './components/crud/Post';
-import Edit from './components/crud/Edit';
-import LeerMais from './components/crud/LeerMais';
+import Post from './components/crud/post/Post';
+import Edit from './components/crud/edit/Edit';
+import LeerMais from './components/crud/leerMais/LeerMais';
+import Pedidos from './components/crud/Pedidos/Pedidos';
 
 function App() {
 	return (
@@ -46,7 +46,7 @@ function App() {
 				<Route path='/home' element={<Index />} />
 				<Route path='/promocoes' element={<Promocoes />} />
 				<Route path='/pedido' element={<Pedido />} />
-				<Route path='/user/feed' element={<Feed />} />
+				<Route path='/user/pedidos' element={<Pedidos />} />
 				<Route path='/user/post' element={<Post />} />
 				<Route path='/user/edit' element={<Edit />} />
 				<Route path='/user/leermais' element={<LeerMais />} />

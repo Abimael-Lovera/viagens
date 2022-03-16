@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Feed() {
+export default function Pedidos() {
 	return (
 		<div>
 			<h1>Page Feed</h1>
