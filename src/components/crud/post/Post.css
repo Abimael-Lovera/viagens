@@ -1,0 +1,28 @@
+:root {
+	--color-title: #181e4b;
+	--color-subtitle: #df6951;
+	--color-nav-footer: #212832;
+	--color-violet: #6246e5;
+	--color-bg: #fff1da;
+	--color-primary: #fff;
+}
+.post {
+	background: #fff1da;
+	min-height: 80vh;
+}
+.post__container {
+	margin-top: 75px;
+	padding: 2rem;
+}
+.post__btn-nav {
+	background: transparent;
+	text-decoration: none;
+	color: #df6951;
+	border: 2px solid #df6951;
+	border-radius: 5px;
+	transition: 300ms ease-in;
+}
+.post__btn-nav:hover {
+	background: #df6951;
+	color: #fff1da;
+}
