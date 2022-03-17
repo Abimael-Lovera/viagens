@@ -49,6 +49,10 @@
 .pedidos__content_title {
 	font-size: 1.1rem;
 }
+.pedidos__btns-nav {
+	display: flex;
+	gap: 1rem;
+}
 .pedidos__btns {
 	display: flex;
 	align-items: center;
@@ -67,6 +71,7 @@
 	background: #181e4b;
 	color: #fff;
 }
+
 .pedidos__btn_excluir {
 	background: transparent;
 	border-color: #dc3545;

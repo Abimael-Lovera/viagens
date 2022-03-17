@@ -18,15 +18,25 @@ export default function Pedidos() {
 				console.log('Get All ', err);
 			});
 	}, []);
+
+	function deletePedido(id) {
+		axios.delete(`http://localhost:8080/pedido/${id}`, {});
+		setPedido(pedido.filter((pedido) => pedido.id !== id));
+	}
 	return (
 		<>
 			<Navbar />
 			<div className='pedidos'>
 				<div className='pedidos__container'>
 					<h1>Meus Pedidos</h1>
-					<Link to='/user/post' className='pedidos__btn-nav btn'>
-						Nova Pedido
-					</Link>
+					<div className='pedidos__btns-nav'>
+						<Link to='/user/post' className='pedidos__btn-nav btn'>
+							Nova Pedido
+						</Link>
+						<Link to='/user' className='pedidos__btn-nav btn'>
+							Perfil
+						</Link>
+					</div>
 					<br />
 					<br />
 					<section className='pedidos__cards'>
@@ -53,11 +63,17 @@ export default function Pedidos() {
 									</div>
 
 									<div className='pedidos__btns'>
-										<Link to='/user/edit' className='btn pedidos__btn_editar'>
+										<Link
+											to={{ pathname: `/user/edit/${ped.id}` }}
+											className='btn pedidos__btn_editar'
+										>
 											Editar <i className='fa-solid fa-pen-to-square'></i>
 										</Link>
 
-										<button className='btn pedidos__btn_excluir '>
+										<button
+											className='btn pedidos__btn_excluir '
+											onClick={() => deletePedido(ped.id)}
+										>
 											Excluir <i className='fa-solid fa-trash-can'></i>
 										</button>
 									</div>

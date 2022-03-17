@@ -47,10 +47,11 @@ function App() {
 				<Route path='/pedido' element={<Pedido />} />
 				<Route path='/user/pedidos' element={<Pedidos />} />
 				<Route path='/user/post' element={<Post />} />
-				<Route path='/user/edit' element={<Edit />} />
+				<Route path='/user/edit/' element={<Edit />} />
+
+				<Route path='/user/edit/:id' element={<Edit />} />
 				<Route path='/user/leermais' element={<LeerMais />} />
 			</Routes>
-			<Footer />
 		</AuthProvider>
 	);
 }

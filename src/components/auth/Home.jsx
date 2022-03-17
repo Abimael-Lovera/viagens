@@ -40,7 +40,7 @@ export function Home() {
 					</button>
 					<br />
 
-					<Link className='form__btn' to='/pedido'>
+					<Link className='form__btn' to='/user/pedidos'>
 						Veja seus Pedidos
 					</Link>
 				</div>
