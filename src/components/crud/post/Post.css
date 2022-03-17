@@ -1,11 +1,3 @@
-:root {
-	--color-title: #181e4b;
-	--color-subtitle: #df6951;
-	--color-nav-footer: #212832;
-	--color-violet: #6246e5;
-	--color-bg: #fff1da;
-	--color-primary: #fff;
-}
 .post {
 	background: #fff1da;
 	min-height: 80vh;
@@ -64,6 +56,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	color: #df6951;
 }
 
 .post__form-label {
@@ -99,6 +92,11 @@
 
 .post__form-input:focus {
 	border-width: 3px;
+}
+
+.post__error-message {
+	color: red;
+	font-size: 0.8rem;
 }
 
 .post__form .post__form-btn {

@@ -1,15 +1,51 @@
 import './Post.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Navbar } from '../../navbar/Navbar';
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { useAuth } from '../../../context/authContext';
+import axios from 'axios';
+
+const validationPost = yup.object().shape({
+	destino: yup.string().ensure().required(''),
+	nome: yup.string().required('O campo Nome é obrigatorio'),
+	email: yup
+		.string()
+		.email('email invalido')
+		.required('O campo email é obrigatorio'),
+	data: yup
+		.string()
+		.required('O campo Data é obrigatorio')
+		.max(10, 'Insira uma Correte YYYY-MM-DD'),
+});
+
 export default function Post() {
+	const { user } = useAuth();
+	console.log(user);
+
+	const navigate = useNavigate();
+
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
-	} = useForm();
+	} = useForm({
+		resolver: yupResolver(validationPost),
+	});
 
-	const addPedido = (dados) => console.log(dados);
+	const addPedido = (dados) => {
+		console.log(dados);
+		axios
+			.post('http://localhost:8080/pedido', dados)
+			.then(() => {
+				console.log('Deu Tudo Certo');
+				navigate('/user/pedidos');
+			})
+			.catch(() => {
+				console.log('Deu Errado');
+			});
+	};
 	return (
 		<>
 			<Navbar />
@@ -36,22 +72,26 @@ export default function Post() {
 										name='destino'
 										{...register('destino')}
 										className='post__form-input-select'
+										placeholder='Seu'
 									>
 										<option value='Origem'>Escolha Seu Destino</option>
-										<option value='sao-paulo'>São Paulo</option>
-										<option value='rio-de-janeiro'>Rio de Janeiro</option>
-										<option value='aracaju'>Aracaju</option>
-										<option value='curitiba'>Curitiba</option>
-										<option value='dubai'>Dubai</option>
-										<option value='florianópolis'>Florianópolis</option>
-										<option value='fortaleza'>Fortaleza</option>
-										<option value='joao-pessoa'>João Pessoa</option>
-										<option value='lisboa'>Lisboa</option>
-										<option value='maceio'>Maceió</option>
-										<option value='natal'>Natal</option>
-										<option value='orlando'>Orlando</option>
-										<option value='salvador'>Salvador</option>
+										<option value='São Paulo'>São Paulo</option>
+										<option value='Rio de Janeiro'>Rio de Janeiro</option>
+										<option value='Aracaju'>Aracaju</option>
+										<option value='Curitiba'>Curitiba</option>
+										<option value='Dubai'>Dubai</option>
+										<option value='Florianópolis'>Florianópolis</option>
+										<option value='Fortaleza'>Fortaleza</option>
+										<option value='João Pessoa'>João Pessoa</option>
+										<option value='Lisboa'>Lisboa</option>
+										<option value='Maceió'>Maceió</option>
+										<option value='Natal'>Natal</option>
+										<option value='Orlando'>Orlando</option>
+										<option value='Salvador'>Salvador</option>
 									</select>
+									<p className='post__error-message'>
+										{errors.destino?.message}
+									</p>
 								</div>
 								<div className='post__form_fields'>
 									<label htmlFor='nome' className='post__form-label'>
@@ -64,11 +104,13 @@ export default function Post() {
 										{...register('nome')}
 										className='post__form-input'
 										placeholder='Biro Biro'
+										value={user.displayName || user.email}
 									/>
+									<p className='post__error-message'>{errors.nome?.message}</p>
 								</div>
 								<div className='post__form_fields'>
 									<label htmlFor='email' className='post__form-label'>
-										Email{' '}
+										Email
 									</label>
 									<input
 										type='email'
@@ -77,7 +119,9 @@ export default function Post() {
 										{...register('email')}
 										className='post__form-input'
 										placeholder='email@gmail.com'
+										value={user.email}
 									/>
+									<p className='post__error-message'>{errors.email?.message}</p>
 								</div>
 								<div className='post__form_fields'>
 									<label htmlFor='data' className='post__form-label'>
@@ -90,6 +134,7 @@ export default function Post() {
 										className='post__form-input'
 										placeholder='YYYY-MM-DD'
 									/>
+									<p className='post__error-message'>{errors.data?.message}</p>
 								</div>
 
 								<button className='post__form-btn btn'>
