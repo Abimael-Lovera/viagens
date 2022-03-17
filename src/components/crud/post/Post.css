@@ -26,3 +26,90 @@
 	background: #df6951;
 	color: #fff1da;
 }
+.post__container-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.post__card {
+	margin-top: 1rem;
+	min-width: 250px;
+	width: 450px;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
+	border: 2px solid #df6951;
+	background: #181e4b;
+	gap: 1rem;
+	padding: 1.5rem;
+	border-radius: 5px 32px 5px 32px;
+}
+
+.post__card-header {
+	text-align: center;
+	color: #fff1da;
+	border-bottom: 2px solid #fff1da;
+}
+
+.post__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	gap: 1rem;
+}
+
+.post__form_fields {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.post__form-label {
+	color: #df6951;
+	font-weight: 500;
+}
+.post__form-input {
+	border-radius: 5px;
+	width: 100%;
+	outline: none;
+	background: transparent;
+	border: none;
+	border: 2px solid #df6951;
+	padding: 0.5em 1em;
+	color: #fff1da;
+	transition: 300ms ease-in;
+}
+
+.post__form-input-select {
+	border-radius: 5px;
+	width: 100%;
+	outline: none;
+	background: transparent;
+	border: none;
+	border: 2px solid #df6951;
+	padding: 0.5em 1em;
+	color: #fff1da;
+	transition: 300ms ease-in;
+}
+.post__form-input-select:focus {
+	background-color: #df6951;
+}
+
+.post__form-input:focus {
+	border-width: 3px;
+}
+
+.post__form .post__form-btn {
+	background: transparent;
+	border: 2px solid #df6951;
+	color: #df6951;
+	transition: 300ms ease-in;
+	width: fit-content;
+}
+
+.post__form-btn:hover {
+	background: #df6951;
+	color: #181e4b;
+}
