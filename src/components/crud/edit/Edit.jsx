@@ -1,6 +1,8 @@
 import './Edit.css';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Navbar } from '../../navbar/Navbar';
+import { Footer } from '../../footer/Footer';
+
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -38,12 +40,12 @@ export default function Edit() {
 	const { id } = useParams();
 
 	useEffect(() => {
-		axios.get(`http://localhost:8080/pedido/${id}`).then((res) => {
+		axios.get(`http://localhost:8080/pedido/${id}`).then(res => {
 			reset(res.data);
 		});
 	}, []);
 
-	const addPedido = (dados) => {
+	const addPedido = dados => {
 		console.log(dados);
 		axios
 			.put(`http://localhost:8080/pedido/${id}`, dados)
@@ -154,6 +156,7 @@ export default function Edit() {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }

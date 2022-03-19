@@ -11,7 +11,6 @@ import { Destinos } from './components/destinos/Destinos';
 import { Promocoes } from './components/promocoes/Promocoes';
 import { Index } from './components/home/Index';
 import { Pedido } from './components/pedido/Pedido';
-import { Footer } from './components/footer/Footer';
 import Post from './components/crud/post/Post';
 import Edit from './components/crud/edit/Edit';
 import LeerMais from './components/crud/leerMais/LeerMais';

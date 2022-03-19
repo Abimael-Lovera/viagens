@@ -1,6 +1,7 @@
 import './Post.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { Navbar } from '../../navbar/Navbar';
+import { Footer } from '../../footer/Footer';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -22,7 +23,6 @@ const validationPost = yup.object().shape({
 
 export default function Post() {
 	const { user } = useAuth();
-	console.log(user);
 
 	const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ export default function Post() {
 		resolver: yupResolver(validationPost),
 	});
 
-	const addPedido = (dados) => {
+	const addPedido = dados => {
 		console.log(dados);
 		axios
 			.post('http://localhost:8080/pedido', dados)
@@ -145,6 +145,7 @@ export default function Post() {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }
