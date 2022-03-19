@@ -37,7 +37,7 @@ export default function Post() {
 	const addPedido = dados => {
 		console.log(dados);
 		axios
-			.post('http://localhost:8080/pedido', dados)
+			.post('https://api-agencia-viagens.herokuapp.com/pedido', dados)
 			.then(() => {
 				console.log('Deu Tudo Certo');
 				navigate('/user/pedidos');

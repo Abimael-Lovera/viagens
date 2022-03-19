@@ -13,7 +13,7 @@ export default function Pedidos() {
 
 	useEffect(() => {
 		axios
-			.get('http://localhost:8080/pedido')
+			.get('https://api-agencia-viagens.herokuapp.com/pedido')
 			.then(res => {
 				console.log('Get All deu certo', res.data);
 				setPedido(res.data);
