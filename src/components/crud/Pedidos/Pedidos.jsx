@@ -24,7 +24,7 @@ export default function Pedidos() {
 	}, []);
 
 	function deletePedido(id) {
-		axios.delete(`http://localhost:8080/pedido/${id}`, {});
+		axios.delete(`https://api-agencia-viagens.herokuapp.com/pedido/${id}`, {});
 		setPedido(pedido.filter(pedido => pedido.id !== id));
 	}
 
